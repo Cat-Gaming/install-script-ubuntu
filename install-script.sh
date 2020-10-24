@@ -43,6 +43,9 @@ flatpak install flathub org.geany.Geany
 # Uses 90 % of memory before using swap space
 sudo echo "vm.swappiness = 10" >> /etc/sysctl.conf
 
+# Firefox Sync
+firefox "https://accounts.firefox.com/?service=sync" && echo Success Firefox Sync Complete!
+
 # Done.
 
 echo "Done! Reboot the Computer."
