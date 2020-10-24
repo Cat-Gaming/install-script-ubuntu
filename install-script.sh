@@ -47,11 +47,11 @@ flatpak install flathub org.kde.kdenlive
 flatpak install flathub org.geany.Geany
 
 # Install Wine and Lutris
+wget -nc https://dl.winehq.org/wine-builds/winehq.key
+sudo apt-key add winehq.key
 sudo add-apt-repository ppa:lutris-team/lutris -yy
 sudo apt-get update
 sudo apt-get install lutris
-wget -nc https://dl.winehq.org/wine-builds/winehq.key
-sudo apt-key add winehq.key
 sudo dpkg --add-architecture i386 
 sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ groovy main' 
 sudo apt-get update
