@@ -21,7 +21,7 @@ rm Minecraft.deb
 sudo apt-get install -yy openjdk-8-jre binutils gcc g++ blender flatpak nasm ffmpeg
 
 # Install OBS Studio
-sudo add-apt-repository ppa:obsproject/obs-studio
+sudo add-apt-repository ppa:obsproject/obs-studio -yy
 sudo apt-get update -qq
 sudo apt-get install obs-studio
 
@@ -30,10 +30,11 @@ mkdir code
 mkdir code/c
 
 # Install vscode
-. <( wget -O - https://code.headmelted.com/installers/apt.sh )
+wget -O vscode.deb https://go.microsoft.com/fwlink/?LinkID=760868
+dpkg -i vscode.deb
 
 # Install appimagelauncher
-sudo add-apt-repository ppa:appimagelauncher-team/stable
+sudo add-apt-repository ppa:appimagelauncher-team/stable -yy
 sudo apt-get update -qq
 sudo apt install appimagelauncher
 
@@ -45,7 +46,7 @@ flatpak install flathub org.kde.kdenlive
 flatpak install flathub org.geany.Geany
 
 # Install Wine and Lutris
-sudo add-apt-repository ppa:lutris-team/lutris
+sudo add-apt-repository ppa:lutris-team/lutris -yy
 sudo apt-get update
 sudo apt-get install lutris
 sudo dpkg --add-architecture i386 
