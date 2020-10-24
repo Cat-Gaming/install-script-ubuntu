@@ -39,6 +39,10 @@ sudo add-apt-repository ppa:appimagelauncher-team/stable -yy
 sudo apt-get update -qq
 sudo apt install appimagelauncher
 
+# Get Flatpak to work
+sudo apt-get install gnome-software-plugin-flatpak
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
 # Install Godot
 flatpak install flathub org.godotengine.Godot
 
