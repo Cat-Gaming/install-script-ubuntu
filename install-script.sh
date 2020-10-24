@@ -14,6 +14,7 @@ mv image.png Pictures/image.png
 gsettings set org.gnome.desktop.background picture-uri file:///home/tyler/Pictures/image.png
 
 # Install my software
+sudo apt-get install default-jre default-jre-headless openjdk-11-jre openjdk-11-jre-headless # Dependencies for Minecraft
 wget https://launcher.mojang.com/download/Minecraft.deb
 sudo dpkg -i Minecraft.deb
 rm Minecraft.deb
