@@ -8,6 +8,11 @@ cd ~
 sudo apt-get update -qq
 sudo apt-get install -yy htop vim wget
 
+# Set Background
+wget -O image.png https://wallpapercave.com/wp/wp4880175.jpg
+mv image.png Pictures/image.png
+gsettings set org.gnome.desktop.background picture-uri file:///home/tyler/Pictures/image.png
+
 # Install my software
 wget https://launcher.mojang.com/download/Minecraft.deb
 dpkg -i Minecraft.deb
