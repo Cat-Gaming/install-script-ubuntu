@@ -39,6 +39,15 @@ flatpak install flathub org.godotengine.Godot
 flatpak install flathub org.kde.kdenlive
 flatpak install flathub org.geany.Geany
 
+# Install Wine and Lutris
+sudo add-apt-repository ppa:lutris-team/lutris
+sudo apt-get update
+sudo apt-get install lutris
+sudo dpkg --add-architecture i386 
+sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ groovy main' 
+sudo apt-get update
+sudo apt-get install --install-recommends winehq-stable
+
 # Swappiness
 # Uses 90 % of memory before using swap space
 sudo echo "vm.swappiness = 10" >> /etc/sysctl.conf
