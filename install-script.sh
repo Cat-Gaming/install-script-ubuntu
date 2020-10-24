@@ -15,7 +15,7 @@ gsettings set org.gnome.desktop.background picture-uri file:///home/tyler/Pictur
 
 # Install my software
 wget https://launcher.mojang.com/download/Minecraft.deb
-dpkg -i Minecraft.deb
+sudo dpkg -i Minecraft.deb
 rm Minecraft.deb
 
 sudo apt-get install -yy openjdk-8-jre binutils gcc g++ blender flatpak nasm ffmpeg
@@ -31,7 +31,7 @@ mkdir code/c
 
 # Install vscode
 wget -O vscode.deb https://go.microsoft.com/fwlink/?LinkID=760868
-dpkg -i vscode.deb
+sudo dpkg -i vscode.deb
 
 # Install appimagelauncher
 sudo add-apt-repository ppa:appimagelauncher-team/stable -yy
@@ -49,6 +49,8 @@ flatpak install flathub org.geany.Geany
 sudo add-apt-repository ppa:lutris-team/lutris -yy
 sudo apt-get update
 sudo apt-get install lutris
+wget -nc https://dl.winehq.org/wine-builds/winehq.key
+sudo apt-key add winehq.key
 sudo dpkg --add-architecture i386 
 sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ groovy main' 
 sudo apt-get update
