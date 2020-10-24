@@ -61,6 +61,10 @@ sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ groovy ma
 sudo apt-get update
 sudo apt-get install --install-recommends winehq-stable
 
+# Install Discord
+wget -O Discord.deb https://discord.com/api/download?platform=linux&format=deb
+dpkg -i Discord.deb
+
 # Swappiness
 # Uses 90 % of memory before using swap space
 sudo echo "vm.swappiness = 10" >> /etc/sysctl.conf
@@ -68,6 +72,7 @@ sudo echo "vm.swappiness = 10" >> /etc/sysctl.conf
 # Firefox Sync
 firefox "https://accounts.firefox.com/?service=sync" && echo Success Firefox Sync Complete!
 
+rm *.deb
 # Done.
 
 echo "Done! Reboot the Computer."
